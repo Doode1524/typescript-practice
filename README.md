@@ -94,4 +94,13 @@ class className {
     }
 }
 const newClassObj = new className(whatever)
-let newTypeOfWhatever: className[] = []   //arrays are the tpe
+let newTypeOfWhatever: className[] = []   //arrays are the type
+
+**public, private, and read only**
+all properties are public by default
+ig:
+public key: type
+
+public - change and read value outside and inside of the class
+private - only read and change inside class
+readonly - only read inside and outside of class but not change

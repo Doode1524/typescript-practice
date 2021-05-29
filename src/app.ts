@@ -1,16 +1,33 @@
 //classes
+
+// class Invoice {
+//     readonly client: string;
+//     private details: string;
+//     public amount: number;
+
+//     constructor(c: string, d: string, a: number) {
+//         this.client = c;
+//         this.details = d
+//         this.amount = a
+//     }
+
+//     format() {
+//         return `${this.client} owes $${this.amount} for ${this.details}`
+//     }
+// }
+
+///////////////////////////////////////
+// shortcut for above ^^^ (only works with access modifiers)
+
 class Invoice {
-    client: string;
-    details: string;
-    amount: number;
 
-    constructor(c: string, d: string, a: number) {
-        this.client = c;
-        this.details = d
-        this.amount = a
-    }
+    constructor(
+        readonly client: string,
+        private details: string,
+        public amount: number,
+    ){}
 
-    format() {
+    format(){
         return `${this.client} owes $${this.amount} for ${this.details}`
     }
 }
@@ -21,6 +38,12 @@ const invTwo = new Invoice('Ella', '1/4th of weed', 90)
 let invoices: Invoice[] = [] // now we can make custom types
 invoices.push(invOne)
 invoices.push(invTwo)
+
+invoices.forEach(inv => {
+    console.log(inv.client, inv.amount, inv.format())
+})
+
+////////////////////////////////////////////
 
 const anchor = document.querySelector('a')!;
 if(anchor) {
