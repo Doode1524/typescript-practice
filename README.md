@@ -104,3 +104,9 @@ public key: type
 public - change and read value outside and inside of the class
 private - only read and change inside class
 readonly - only read inside and outside of class but not change
+
+**modules**
+in tsconfig: change module to "es2015" and target to "es6"
+in index.html, change script to type="module"
+export the module
+import js, not ts

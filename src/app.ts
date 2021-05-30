@@ -1,3 +1,4 @@
+import { Invoice } from './classes/Invoice.js'
 //classes
 
 // class Invoice {
@@ -19,18 +20,7 @@
 ///////////////////////////////////////
 // shortcut for above ^^^ (only works with access modifiers)
 
-class Invoice {
 
-    constructor(
-        readonly client: string,
-        private details: string,
-        public amount: number,
-    ){}
-
-    format(){
-        return `${this.client} owes $${this.amount} for ${this.details}`
-    }
-}
 
 const invOne = new Invoice('Joey', '1/8th of weed', 50)
 const invTwo = new Invoice('Ella', '1/4th of weed', 90)
