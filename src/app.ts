@@ -1,3 +1,7 @@
+import { Invoice } from './classes/Invoice.js'
+import { Payment } from './classes/Payment.js'
+import { HasFormatter } from './interfaces/HasFormatter.js'
+
 interface IsPerson {
   name: string
   age: number
@@ -25,29 +29,11 @@ const greetPerson = (person: IsPerson) => {
 greetPerson(me)
 console.log(me)
 
-import { Invoice } from './classes/Invoice.js'
-//classes
+let docOne: HasFormatter
+let docTwo: HasFormatter
 
-// class Invoice {
-//     readonly client: string;
-//     private details: string;
-//     public amount: number;
-
-//     constructor(c: string, d: string, a: number) {
-//         this.client = c;
-//         this.details = d
-//         this.amount = a
-//     }
-
-//     format() {
-//         return `${this.client} owes $${this.amount} for ${this.details}`
-//     }
-// }
-
-///////////////////////////////////////
-// shortcut for above ^^^ (only works with access modifiers)
-
-
+docOne = new Invoice('yoshi', 'web work', 200)
+docTwo = new Payment('mario', 'plumbing work', 230)
 
 const invOne = new Invoice('Joey', '1/8th of weed', 50)
 const invTwo = new Invoice('Ella', '1/4th of weed', 90)
@@ -88,3 +74,24 @@ form.addEventListener('submit', (e: Event) => {
     amount.valueAsNumber
   );
 });
+
+//classes
+
+// class Invoice {
+//     readonly client: string;
+//     private details: string;
+//     public amount: number;
+
+//     constructor(c: string, d: string, a: number) {
+//         this.client = c;
+//         this.details = d
+//         this.amount = a
+//     }
+
+//     format() {
+//         return `${this.client} owes $${this.amount} for ${this.details}`
+//     }
+// }
+
+///////////////////////////////////////
+// shortcut for above ^^^ (only works with access modifiers)

@@ -115,3 +115,4 @@ import js, not ts
 use interface objName {
     to decalre a variable type
 }
+use implements for class interface
