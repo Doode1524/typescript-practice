@@ -110,3 +110,8 @@ in tsconfig: change module to "es2015" and target to "es6"
 in index.html, change script to type="module"
 export the module
 import js, not ts
+
+**interface**
+use interface objName {
+    to decalre a variable type
+}
