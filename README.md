@@ -116,3 +116,29 @@ use interface objName {
     to decalre a variable type
 }
 use implements for class interface
+
+**generics**
+// T is defining the type, extends declares required field
+const addUID = <T extends {name: string}>(obj: T) => {
+  let uid = Math.floor(Math.random() * 100);
+  return {...obj, uid};
+}
+let docOne = addUID({name: 'joey', age: 37})
+console.log(docOne.age)
+
+// with interfaces
+interface Resource<T> {
+    uid: number
+    resourceName: string
+    data: T
+}
+const docThree: Resource<object> = {
+    uid: 1,
+    resourceName: 'person',
+    data: {name: 'joey'}
+}
+const docFour: Resource<string[]> = {   /// array of strings
+    uid: 2,
+    resourceName: 'shopping list',
+    data: {'bread', 'milk', 'tp'}
+}
