@@ -142,3 +142,12 @@ const docFour: Resource<string[]> = {   /// array of strings
     resourceName: 'shopping list',
     data: {'bread', 'milk', 'tp'}
 }
+
+**enums**
+enum ResourceType { BOOK, AUTHOR, FILM, DIRECTOR, PERSON} // sets the resource type based on index
+
+const docThree: Resource<object> = {
+    uid: 1,
+    resourceType: ResourceType.BOOK,   //// resourceType 0, for index
+    data: {name: 'joey'}
+}
