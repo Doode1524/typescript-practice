@@ -151,3 +151,6 @@ const docThree: Resource<object> = {
     resourceType: ResourceType.BOOK,   //// resourceType 0, for index
     data: {name: 'joey'}
 }
+
+**tuples**
+let tup: [string, number, boolean] = ['joey', 37, true]
